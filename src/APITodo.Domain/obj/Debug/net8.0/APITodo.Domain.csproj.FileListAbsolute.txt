@@ -1,0 +1,12 @@
+C:\Projetos\API\APITodo\src\APITodo.Domain\bin\Debug\net8.0\APITodo.Domain.deps.json
+C:\Projetos\API\APITodo\src\APITodo.Domain\bin\Debug\net8.0\APITodo.Domain.dll
+C:\Projetos\API\APITodo\src\APITodo.Domain\bin\Debug\net8.0\APITodo.Domain.pdb
+C:\Projetos\API\APITodo\src\APITodo.Domain\obj\Debug\net8.0\APITodo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\API\APITodo\src\APITodo.Domain\obj\Debug\net8.0\APITodo.Domain.AssemblyInfoInputs.cache
+C:\Projetos\API\APITodo\src\APITodo.Domain\obj\Debug\net8.0\APITodo.Domain.AssemblyInfo.cs
+C:\Projetos\API\APITodo\src\APITodo.Domain\obj\Debug\net8.0\APITodo.Domain.csproj.CoreCompileInputs.cache
+C:\Projetos\API\APITodo\src\APITodo.Domain\obj\Debug\net8.0\APITodo.Domain.sourcelink.json
+C:\Projetos\API\APITodo\src\APITodo.Domain\obj\Debug\net8.0\APITodo.Domain.dll
+C:\Projetos\API\APITodo\src\APITodo.Domain\obj\Debug\net8.0\refint\APITodo.Domain.dll
+C:\Projetos\API\APITodo\src\APITodo.Domain\obj\Debug\net8.0\APITodo.Domain.pdb
+C:\Projetos\API\APITodo\src\APITodo.Domain\obj\Debug\net8.0\ref\APITodo.Domain.dll

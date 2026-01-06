@@ -1235,6 +1235,32 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "APITodo.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/APITodo.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/APITodo.Domain.dll": {}
+        }
+      },
+      "APITodo.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "APITodo.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.10",
+          "Microsoft.EntityFrameworkCore.Design": "9.0.10",
+          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.10"
+        },
+        "compile": {
+          "bin/placeholder/APITodo.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/APITodo.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -3649,10 +3675,21 @@
         "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "APITodo.Domain/1.0.0": {
+      "type": "project",
+      "path": "../APITodo.Domain/APITodo.Domain.csproj",
+      "msbuildProject": "../APITodo.Domain/APITodo.Domain.csproj"
+    },
+    "APITodo.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../APITodo.Infrastructure/APITodo.Infrastructure.csproj",
+      "msbuildProject": "../APITodo.Infrastructure/APITodo.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "APITodo.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.11",
       "Microsoft.EntityFrameworkCore >= 9.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.10",
@@ -3684,7 +3721,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Projetos\\API\\APITodo\\src\\APITodo.Infrastructure\\APITodo.Infrastructure.csproj": {
+              "projectPath": "C:\\Projetos\\API\\APITodo\\src\\APITodo.Infrastructure\\APITodo.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
