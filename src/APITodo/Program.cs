@@ -1,4 +1,8 @@
+using APITodo.Application.Interfaces;
+using APITodo.Application.Services;
 using APITodo.Infrastructure.Context;
+using APITodo.Infrastructure.Interfaces;
+using APITodo.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +17,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseSqlite(connectionString));
+builder.Services.AddScoped<ITodoRepository, TodoRepository>();
+builder.Services.AddScoped<ITodoServices, TodoServices>();
 
 var app = builder.Build();
 
