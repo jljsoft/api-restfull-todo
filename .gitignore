@@ -1,4 +1,8 @@
 todo.db
-.vscode
-bin
-obj
+
+# VS Code workspace settings
+.vscode/
+
+# Build output folders (ignore in all projects/subfolders)
+**/bin/
+**/obj/
