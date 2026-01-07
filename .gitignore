@@ -6,3 +6,10 @@ todo.db
 # Build output folders (ignore in all projects/subfolders)
 **/bin/
 **/obj/
+src/APITodo.Application/bin
+src/APITodo.Application/obj
+src/APITodo.Domain/bin  
+src/APITodo.Domain/obj
+src/APITodo.Infrastructure/bin
+src/APITodo.Infrastructure/obj
+src/APITodo.Infrastructure/Migrations

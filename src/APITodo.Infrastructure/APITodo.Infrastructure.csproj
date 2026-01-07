@@ -16,4 +16,9 @@
     <ProjectReference Include="..\APITodo.Domain\APITodo.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>

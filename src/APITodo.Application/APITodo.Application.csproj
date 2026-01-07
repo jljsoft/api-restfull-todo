@@ -2,6 +2,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\APITodo.Domain\APITodo.Domain.csproj" />
+    <ProjectReference Include="..\APITodo.Infrastructure\APITodo.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 
   <PropertyGroup>
