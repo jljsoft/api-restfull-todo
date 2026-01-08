@@ -30,6 +30,11 @@ namespace APITodo.Controllers
             {
                 return BadRequest(new { erro = validationMessage });
             }
+            var lengthValidationMessage = _todoServices.IsValidLength(todo);
+            if (!string.IsNullOrEmpty(lengthValidationMessage))
+            {
+                return BadRequest(new { erro = lengthValidationMessage });
+            }
 
             var createdTodo = await _todoServices.AddTodo(todo);
             try

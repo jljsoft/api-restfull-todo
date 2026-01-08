@@ -55,5 +55,17 @@ namespace APITodo.Application.Services
             }
             return string.Empty;
         }
+        public string IsValidLength(TodoDto todo)
+        {
+            if (todo.Titulo.Length > 100)
+            {
+                return "Titulo deve ter no máximo 100 caracteres.";
+            }
+            if (todo.Descricao.Length > 1000)
+            {
+                return "Descrição deve ter no máximo 1000 caracteres.";
+            }
+            return string.Empty;
+        }
     }
 }
