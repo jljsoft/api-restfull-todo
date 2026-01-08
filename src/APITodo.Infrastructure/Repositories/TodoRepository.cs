@@ -16,8 +16,16 @@ public class TodoRepository : ITodoRepository
 
     public async Task<Todo> AddTodo(Todo todo)
     {
-        await _context.Todos.AddAsync(todo);
-        await _context.SaveChangesAsync();
-        return todo;
+        try
+        {
+            await _context.Todos.AddAsync(todo);
+            await _context.SaveChangesAsync();
+            return todo;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+
     }
 }

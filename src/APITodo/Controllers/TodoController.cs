@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using APITodo.Application.Interfaces;
 using APITodo.Domain.DTOs;
-using APITodo.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -31,8 +30,18 @@ namespace APITodo.Controllers
             {
                 return BadRequest(new { erro = validationMessage });
             }
+
             var createdTodo = await _todoServices.AddTodo(todo);
-            return CreatedAtAction(nameof(AddTodo), new { id = createdTodo.Id }, createdTodo);
+            try
+            {
+               
+                return CreatedAtAction(nameof(AddTodo), new { id = createdTodo.Id }, createdTodo);
+            }
+            catch (Exception ex)
+            {
+                
+                return StatusCode(500, new { erro = $"Ocorreu um erro ao criar o Todo. {ex.Message}" });
+            }
         }
     }
 }

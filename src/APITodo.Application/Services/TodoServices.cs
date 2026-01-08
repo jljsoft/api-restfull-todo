@@ -20,13 +20,23 @@ namespace APITodo.Application.Services
 
         public async Task<Todo> AddTodo(TodoDto todo)
         {
-            var newTodo = new Todo
+            
+            try
             {
-                Titulo = todo.Titulo,
-                Descricao = todo.Descricao,
-                DataCriacao = DateTime.Now
-            };
-            return await _todoRepository.AddTodo(newTodo);
+                var newTodo = new Todo
+                {
+                    Titulo = todo.Titulo,
+                    Descricao = todo.Descricao,
+                    DataCriacao = DateTime.Now
+                };
+                var result = await _todoRepository.AddTodo(newTodo);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                
+                throw new Exception(ex.Message);
+            }
         }
 
         public string IsValid(TodoDto todo)

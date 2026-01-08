@@ -18,9 +18,17 @@ namespace APITodo.Infrastructure.Context
             modelBuilder.Entity<Todo>(entity =>
             {
                 entity.HasKey(e => e.Id);
-
                 entity.Property(e => e.Id)
                     .ValueGeneratedOnAdd();
+
+                entity.Property(e => e.Titulo)
+                    .HasColumnType("VARCHAR(100)");
+
+                entity.Property(e => e.Descricao)
+                    .HasColumnType("VARCHAR(1000)");
+
+                entity.Property(e => e.DataCriacao)
+                    .HasColumnType("DATETIME");
             });
         }
 
