@@ -36,10 +36,10 @@ namespace APITodo.Controllers
                 return BadRequest(new { erro = lengthValidationMessage });
             }
 
-            var createdTodo = await _todoServices.AddTodo(todo);
+            
             try
             {
-               
+                var createdTodo = await _todoServices.AddTodo(todo);
                 return CreatedAtAction(nameof(AddTodo), new { id = createdTodo.Id }, createdTodo);
             }
             catch (Exception ex)
